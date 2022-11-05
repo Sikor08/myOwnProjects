@@ -23,6 +23,7 @@
 .top {
   background: url("/newAutomationTool(Figma)/img/top__background.png");
   background-position: bottom;
+  margin-bottom: 64px;
 }
 
 .top__content {
@@ -125,6 +126,11 @@
   }
 }
 
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+
 .wrapper {
   max-width: 1140px;
   margin: 0 auto;
@@ -137,18 +143,15 @@
   }
 }
 
-.whatWeDo__heading {
+.whatWedo__heading {
   font-family: 'Roboto';
+  text-align: center;
   font-weight: 300;
   font-size: 36px;
   line-height: 46px;
   letter-spacing: 0.05em;
   color: #000000;
-}
-
-.card {
-  width: 360px;
-  border: 1px solid #000;
+  margin-bottom: 64px;
 }
 
 .cardBox {
@@ -157,10 +160,55 @@
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   list-style-type: none;
+  gap: 32px;
 }
 
 .card {
-  width: 359px;
-  height: 480px;
+  padding: 44px 32px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+          box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+  border-radius: 10px;
+}
+
+.card__img {
+  margin-bottom: 52px;
+  text-align: center;
+}
+
+.card__heading {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  color: #1F3F68;
+  margin-bottom: 14px;
+}
+
+.card__text {
+  max-width: 425px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  color: #1F3F68;
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+.card a {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  color: #5A98D0;
+}
+
+.finishedProjects {
+  margin-top: 65px;
 }
 /*# sourceMappingURL=style.css.map */
