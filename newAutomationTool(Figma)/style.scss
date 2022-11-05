@@ -1,0 +1,44 @@
+// variables and mixins
+@import 'scssBlocks/variables';
+@import 'scssBlocks/topStyle';
+
+
+
+//
+.wrapper{
+    max-width: $SiteWidth;
+    margin: 0 auto;
+    padding: 0 113px;
+    @media (max-width: $tabletWidth) {
+        padding: 0 18px;
+    }
+
+}
+
+.whatWeDo__heading{
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 46px;
+    letter-spacing: 0.05em;
+    color: #000000;
+}
+.card{
+    width: 360px;
+    border: 1px solid #000;
+}
+.cardBox{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include ulStylesNone
+}
+.card{
+    width: 359px;
+    height: 480px;
+    // &__heading{
+    
+    // }
+    // &__text{
+
+    // }
+}

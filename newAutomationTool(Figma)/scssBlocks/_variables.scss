@@ -1,0 +1,16 @@
+@mixin textStyle{
+    max-width: 425px;
+    font-family: 'Roboto', sans-serif;    
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    color: #1F3F68;
+    opacity: 0.6;
+}
+@mixin ulStylesNone {
+    list-style-type: none;
+}
+$SiteWidth: 1140px;
+$tabletWidth: 1024px; 
+$mobileWidth: 768px; 

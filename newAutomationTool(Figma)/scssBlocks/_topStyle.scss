@@ -1,0 +1,83 @@
+@import 'variables';
+
+.header{
+    margin: 42px 0 110px;
+    @media (max-width: $mobileWidth) {
+        margin: 42px 0 26px;
+    }
+    &__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+}
+.top{
+    background: url('/newAutomationTool(Figma)/img/top__background.png');
+    background-position: bottom;
+    &__content{
+        background-image: url('/newAutomationTool(Figma)/img/top__backgroundImg.png');
+        background-repeat: no-repeat;
+        background-position: right bottom 93px;
+        @media (max-width: $tabletWidth) {
+            background-size: 44%;
+            background-position: right bottom 123px;
+        }
+        @media (max-width: $mobileWidth) {
+            display: flex;
+            flex-direction: column; 
+            background-image: none;
+            text-align: center;
+            align-items: center;
+        }
+    }
+    &__heading{
+        margin: 0 0 30px;
+        max-width: 506px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 64px;
+        line-height: 74px;
+        letter-spacing: 0.04em;
+        color: #1F3F68;
+        @media (max-width: $mobileWidth) {
+            font-size: 34px;
+            line-height: 39px;
+            text-align: center;
+            margin: 0;
+        }
+    }
+    &__text{
+      @include textStyle;
+      margin-bottom: 75px;
+      @media (max-width: $mobileWidth) {
+        margin: 12px 0 24px;
+      }
+    }
+    &__btn{
+        padding: 15px 50px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        text-align: center;
+        letter-spacing: 0.04em;
+        color: #FFFFFF;background: #5A98D0;
+        box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+        border-radius: 10px;
+        border: none;
+        margin-bottom: 190px;
+        @media (max-width: $mobileWidth) {
+            padding: 0;
+            margin-bottom: 41px;
+            width: 108px;
+            height: 27px;
+            font-family: 'Roboto' sans-serif;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 26px;
+            text-align: center;
+            color: #FFFFFF;
+          }
+    }
+    
+}
