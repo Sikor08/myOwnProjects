@@ -1,0 +1,71 @@
+@import 'variables';
+.whatWeDo{
+    margin-bottom: 41px;
+}
+.whatWedo__heading{
+    font-family: 'Roboto';
+    text-align: center;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 46px;
+    letter-spacing: 0.05em;
+    color: #000000;
+    margin-bottom: 64px;
+}
+.cardBox{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    @include ulStylesNone;
+    gap: 32px;
+    @media (max-width: $tabletWidth) {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}
+.card{
+    max-width: 359px;
+    // height: 480px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 37px 32px 40px 32px;
+    background: #FFFFFF;
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    &__img{
+        align-self: center;
+        margin-bottom: 51px;
+    }
+
+    &__heading{
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 31px;
+        letter-spacing: 0.056em;
+        color: #1F3F68;
+        margin-bottom: 9px;
+    }
+    &__text{
+        @include textStyle;
+        margin-bottom: 21px;
+    }
+    &__linkWrap{
+        display: flex;
+        align-items: center;
+    }
+    .card__link{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 30px;
+        letter-spacing: 0.05em;
+        color: #5A98D0;
+        text-decoration: none;
+        margin-right: 24px;
+        &_svg{
+            margin-bottom: 4px;
+        }
+    }
+}
