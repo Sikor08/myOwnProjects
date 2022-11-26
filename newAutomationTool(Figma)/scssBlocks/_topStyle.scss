@@ -1,7 +1,6 @@
-@import 'variables';
 
 .header{
-    margin: 42px 0 110px;
+    margin: 42px 0 120px;
     @media (max-width: $mobileWidth) {
         margin: 42px 0 26px;
     }
