@@ -23,7 +23,6 @@
 }
 .card{
     max-width: 359px;
-    // height: 480px;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -34,6 +33,11 @@
     &__img{
         align-self: center;
         margin-bottom: 51px;
+        transition-duration: 1s;
+    }
+    &__img:hover{
+        transition-duration: 1s;
+        transform: rotate3d(0, 1, 0, 180deg);
     }
 
     &__heading{

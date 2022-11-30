@@ -77,20 +77,28 @@
             </div>
             <div class="contacts-right">
                 <h4 class="contacts-right__heading">SEND US MESSAGE</h4>
-                <form action="">
-                    <label class="inputTitle" for="fullName">Full Name</label>
-                    <input id="name" list="names" name="MyNames" placeholder="Your Name">
-                    <label class="inputTitle" for="email">Email</label>
-                    <input id="email" type="email" placeholder="Your Email">
 
-                    <label class="inputTitle" for="">Message</label>
-                    <input id="message" type="text" placeholder="Your Message">
+                <form action="" method="get" class="home" id="myform">
+                    <label class="inputAria" for="fullName">
+                        <p>Full Name</p>
+                        <input type="tel" id="name" name="name" placeholder="Your Name">
+                    </label>
+                    <label class="inputAria" class="inputTitle" for="email">
+                        <p>Email</p>
+                        <input id="email" type="email" name="email" placeholder="Your Email">
+                    </label>
+                    <label class="inputAria" class="inputTitle" for="">
+                        <p>Message</p>
+                        <input id="message" type="text" name="message" placeholder="Your Message">
+                    </label>
                     <button id="submit-btn" type="submit">SUBMIT</button>
                 </form>
             </div>
         </div>
     </div>
-    <div class="map"></div>
+    <div class="map">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7adbe447fa4f2c6bb8f2d84cfc0adf91f6b9752bf188527d29ed9c8786b3a617&amp;width=100%&amp;height=480&amp;lang=ru_RU&amp;scroll=true"></script>
+    </div>
     <footer>
         <div class="footerWrap">
         <div class="wrapper">
@@ -118,11 +126,21 @@
               </ul>
               <div class="footer-copy">2021 All rights reserved.</div>
                 </div>
-            
-
-            </div>
-      
-      
+            </div>  
     </footer>
+    <script>
+//  Когда вся вёрстка загружена, находим форму и слушаем 'submit'
+//  Создаём объект класса 'validator'
+//  Если свойство valid = false, отменяем действие по умолчанию(форма не отправится)
+        window.onload = () => {
+            document.getElementById('myform').addEventListener('submit', (event) => {
+                let valid = new Validator('myform');
+            if(!valid.valid) {
+                event.preventDefault()
+            }
+            })
+        }
+    </script>
+    <script src="validator.js"></script>
 </body>
 </html>

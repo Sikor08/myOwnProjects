@@ -36,7 +36,7 @@ a{
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 56px;
     &__heading{
        font-family: 'Roboto';
        font-weight: 500;
@@ -59,6 +59,7 @@ a{
 }
 .contactsWrap{
     display: flex;
+    margin-bottom: 96px;
     @media (max-width: $tabletWidth) {
         flex-direction: column;
         align-items: center;
@@ -68,11 +69,16 @@ a{
     margin-bottom: 40px;
 }
 .contacts-left{
-    padding: 100px 0 0 100px;
+    padding: 77px 0 0 100px;
+    @media (max-width:$tabletWidth) {
+        padding: 0;
+    }
     &__img{
-        margin-bottom: 56px;
+        margin-bottom: 53px;
         margin-right: 100px;
-
+        @media (max-width:$tabletWidth) {
+            margin-right: 0;
+        }
     }
 }
 .contacts-address__heading{
@@ -82,7 +88,7 @@ a{
     line-height: 30px;
     letter-spacing: 0.04em;
     color: #1F3F68;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
 }
 .contacts-address-content{
     max-width: 299px;
@@ -99,7 +105,7 @@ a{
         margin-bottom: 16px;
     }
     &__svg{
-        margin-right: 19px;
+        margin-right: 23px;
     }
     &__email{
         display: flex;
@@ -107,14 +113,19 @@ a{
         margin-bottom: 16px;
     }
     &__svg{
-        margin-right: 18px;
+        margin-right: 24px;
     }
 }
 .contacts-right{
+    width: 429px;
     background: #FFFFFF;
     box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
     border-radius: 10px;
     padding: 56px;
+    @media (max-width: $mobileWidth) {
+        width: 300px;
+        padding: 36px 25px;
+    }
     &__heading{
         font-family: 'Roboto';
         font-weight: 500;
@@ -122,13 +133,25 @@ a{
         line-height: 30px;
         letter-spacing: 0.04em;
         color: #1F3F68;
-        margin-bottom: 48px;
+        margin-bottom: 47px;
+        @media (max-width: $tabletWidth) {
+            width: 150px;
+        }
+        @media (max-width: $mobileWidth) {
+            width: auto;
+        }
     }
+    
 }
 form{
     display: flex;
     flex-direction: column;
-    .inputTitle{
+    p{
+        margin-bottom: 8px;
+    }
+    .inputAria{
+        display: flex;
+        flex-direction: column;
         font-family: 'Roboto';
         font-weight: 400;
         font-size: 16px;
@@ -136,47 +159,44 @@ form{
         letter-spacing: 0.04em;
         color: #1F3F68;
         opacity: 0.8;
-        margin-bottom: 10px;
+        margin-bottom: 31px;
     }
-    input#name, input#email {
-        padding-left: 40px;
-        height: 72px;
+    #name, #email, #message{
+        padding: 28px 42px;
         opacity: 0.4;
         border: 1px solid #356EAD;
         border-radius: 10px;
-        margin-bottom: 33px;
     }
-   
-    input#message{
-        padding-left: 40px;
-        height: 144px;
-        opacity: 0.4;
-        border: 1px solid #356EAD;
-        border-radius: 10px;
-        margin-bottom: 70px;
+    #message{
+        min-height: 144px;
+        margin-bottom: 72px;
+
     }
-    button#submit-btn{
-        width: 428px;
-        height: 72px;
+    #message::placeholder{
+        position: absolute;
+        left: 36px;
+        top: 25px;
+}
+    #submit-btn{
+        padding: 25px;
         background: #5A98D0;
         box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
-        border: none;
         border-radius: 10px;
-        font-family: 'Roboto';
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 26px;
-        letter-spacing: 0.04em;
-        color: #FFFFFF;
-}
+        border: none;
+    }
 }
 
+.map{
+    margin-bottom: 92px;
+}
 
-
-
-
-
-
-
-
-
+.error-msg{
+    color: red;
+    margin: 10px 0;
+}
+.invalid{
+    border: 2px solid red;
+}
+.invalid{
+    border: 2px solid green;
+}

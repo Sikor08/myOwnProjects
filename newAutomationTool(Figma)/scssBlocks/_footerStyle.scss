@@ -83,6 +83,11 @@ footer{
     }
     
 }
+.footer-btn:hover{
+    transition-duration: 1s;
+    transform: rotate3d(0, 1, 0, 180deg); 
+
+}
 
 .footerBottom{
     padding: 64px 0;
