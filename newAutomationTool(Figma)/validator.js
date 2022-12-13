@@ -2,7 +2,7 @@ class Validator {
     constructor(form) {
         this.patterns = {
             name: /^[a-zа-яё]+$/i,
-            phone: /^\+7\(\d{3}\)\d{3}-\d{4}$/,
+            // phone: /^\+7\(\d{3}\)\d{3}-\d{4}$/,
             email: /^[\w._-]+@\w+\.[a-z]{2,4}$/i
         };
         this.errors = {
@@ -46,7 +46,7 @@ class Validator {
         field.parentNode.insertAdjacentHTML('beforeend', error);
     }
     _watchField(field){
-        field.addEventListener('input', () => {
+        field.addEventListener('keyup', () => {
             let error = field.parentNode.querySelector(`.${this.errorClass}`);
             if(this.patterns[field.name].test(field.value)){
                 field.classList.remove('invalid');
